@@ -4,7 +4,7 @@
   <Languages xmlns="">
     <Language code="fr" />
   </Languages>
-  <App xmlns="" ProductID="{eed6db68-cecc-4755-bcec-9730bcff6e8c}" Title="@AppResLib.dll,-100" RuntimeType="Silverlight" Version="1.0.0.1" Genre="apps.normal" Author="NamedJohnny" Description="Sample description" SDOptOut="false" BackUpOptOut="false" Publisher="RealEstateTourNotebook" PublisherID="{9FC9E25B-B48D-47A6-998F-80247A87760A}">
+  <App xmlns="" ProductID="{eed6db68-cecc-4755-bcec-9730bcff6e8c}" Title="@AppResLib.dll,-100" RuntimeType="Silverlight" Version="1.0.0.2" Genre="apps.normal" Author="NamedJohnny" Description="Sample description" SDOptOut="false" BackUpOptOut="false" Publisher="RealEstateTourNotebook" PublisherID="{9FC9E25B-B48D-47A6-998F-80247A87760A}">
     <IconPath IsRelative="true" IsResource="false">Assets\real_estate_logo.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

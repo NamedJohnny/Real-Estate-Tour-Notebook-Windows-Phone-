@@ -19,8 +19,6 @@ namespace RealEstateTourNotebook.ViewModel
     public class FilterByViewModel : ViewModelBase
     {
         private ICommand _listFilterCommand;
-        private TourType _selectedItem;
-        private EstateType _selectedEstate;
         private INavigationService navigationService;
         /// <summary>
         /// Initializes a new instance of the FilterByViewModel class.

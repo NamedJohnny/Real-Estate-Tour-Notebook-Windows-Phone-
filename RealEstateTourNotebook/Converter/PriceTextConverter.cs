@@ -14,7 +14,7 @@ namespace RealEstateTourNotebook.Converter
         {
             string price = value.ToString();
             if (int.Parse(price) == 0)
-                return String.Empty; 
+                return "0"; 
             string result = string.Empty;
             int j = 0;
             for (int i = price.Length - 1; i >= 0; i--)

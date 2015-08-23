@@ -149,7 +149,7 @@ namespace RealEstateTourNotebook.View
         {
             try
             {
-                if (e.Result.Count == 0)
+                if (!String.IsNullOrEmpty(NameTextBox.Text) && e.Result.Count == 0)
                 {
                     MessageBox.Show(string.Format(AppResources.InvalideSearch, NameTextBox.Text), AppResources.Warning, MessageBoxButton.OK);
                     return;
@@ -181,7 +181,7 @@ namespace RealEstateTourNotebook.View
                 ViewModel.Tour.Latitude = coord.Latitude;
                 ViewModel.Tour.Longitude = coord.Longitude;
             }
-            catch (Exception ex) { }
+            catch (Exception ex) { throw ex; }
         }
     }
 }

@@ -74,6 +74,14 @@ namespace RealEstateTourNotebook.ViewModel
             }
         }
 
+        public bool IsPhoneVisible
+        {
+            get
+            {
+                return Tour.PhoneNumber > 0;
+            }
+        }
+
         #endregion
 
         #region DBMethods

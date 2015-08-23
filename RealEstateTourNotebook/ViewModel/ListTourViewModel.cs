@@ -29,7 +29,6 @@ namespace RealEstateTourNotebook.ViewModel
         private ICommand _checkListTourCommand;
         private ICommand _compareCommand;
         private INavigationService navigationService;
-        private FilterBy _currentFilter;
         #endregion private properties
 
         #region Contructor

@@ -99,8 +99,9 @@
                         <UserControls:TileUserControl TextVisible="True" x:Name="MapIt" Tap="MapIt_Tap" Height="140" CustomColor="{StaticResource PhoneAccentBrush}" TextValue="{Binding Path=LocalizedResources.GoTo, Source={StaticResource LocalizedStrings}}" ImageSource="/Images/appbar.location.round.png" Width="150" ></UserControls:TileUserControl>
                         <UserControls:TileUserControl TextVisible="True" x:Name="Checklist" Tap="Checklist_Tap" Margin="10,0,0,0" Height="140" Grid.Column="1" CustomColor="{StaticResource PhoneAccentBrush}" TextValue="{Binding Path=LocalizedResources.EstateCheckList, Source={StaticResource LocalizedStrings}}" ImageSource="/Images/appbar.list.check.png"  ></UserControls:TileUserControl>
                     </Grid>
-
-                    <UserControls:TileUserControl TextVisible="True" Margin="0,0,0,20" x:Name="PhoneCall"  Tap="PhoneCall_Tap" Height="140" CustomColor="{StaticResource PhoneAccentBrush}" ImageSource="/Images/appbar.phone.png"  ></UserControls:TileUserControl>
+                    <Grid Visibility="{Binding IsPhoneVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <UserControls:TileUserControl  TextVisible="True" Margin="0,0,0,20" x:Name="PhoneCall"  Tap="PhoneCall_Tap" Height="140" CustomColor="{StaticResource PhoneAccentBrush}" ImageSource="/Images/appbar.phone.png"  ></UserControls:TileUserControl>
+                    </Grid>
                 </StackPanel>
             </ScrollViewer>
         </Grid>

@@ -46,7 +46,7 @@ namespace RealEstateTourNotebook.View
                 (ApplicationBar.Buttons[0] as ApplicationBarIconButton).Text = AppResources.Edit;
             }
 
-            PhoneCall.TextValue = ViewModel.Tour.OwnerName.ToUpper();
+            PhoneCall.TextValue = (ViewModel.Tour.OwnerName !=null ? ViewModel.Tour.OwnerName.ToUpper() :"");
         }
 
         /// <summary>

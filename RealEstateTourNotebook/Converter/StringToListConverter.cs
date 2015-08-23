@@ -13,7 +13,11 @@ namespace RealEstateTourNotebook.Converter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return Utility.StringToList(value.ToString());
+            if (value != null)
+            {
+                return Utility.StringToList(value.ToString());
+            }
+            return new List<string>();
         }
 
 
