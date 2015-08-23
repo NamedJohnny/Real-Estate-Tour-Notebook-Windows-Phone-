@@ -1,0 +1,157 @@
+﻿<phone:PhoneApplicationPage x:Class="RealEstateTourNotebook.View.CompareView"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:ignore="http://www.ignore.com"
+                            mc:Ignorable="d ignore"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="PortraitOrLandscape"
+                            Orientation="Portrait"
+                            Loaded="PhoneApplicationPage_Loaded"
+                            Name="ComparePage"
+                            shell:SystemTray.IsVisible="True"
+                             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            DataContext="{Binding CompareView, Source={StaticResource Locator}}">
+    <phone:PhoneApplicationPage.Resources>
+
+        <DataTemplate x:Key="ItemTemplate">
+            <StackPanel Tap="Image_Tap">
+                <Image Source="{Binding Image,Converter={StaticResource ByteToImageConverter},ConverterParameter=true}" 
+                       Width="130" Height="130" Stretch="UniformToFill">
+                </Image>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Contrôle Pivot-->
+        <phone:Pivot Name="MainPivot" ItemsSource="{Binding TourList}" Title="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}">
+            <phone:Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,20,0,0" >
+                        <Image Height="200" Source="{Binding MainImage,Converter={StaticResource ByteToImageConverter}}">
+                        </Image>
+                        <TextBlock TextWrapping="Wrap"  FontSize="25" Width="300" Margin="10"   Text="{Binding AddressName}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </phone:Pivot.HeaderTemplate>
+            <phone:Pivot.ItemTemplate>
+                <DataTemplate>
+                    <ScrollViewer>
+                        <StackPanel Visibility="{Binding ConstructionYear, Converter={StaticResource CompareVisibilityConverter}}" >
+                            <StackPanel Margin="15,0,0,0">
+                                <TextBlock TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.YearBuilt, Source={StaticResource LocalizedStrings}}"/>
+                                <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding ConstructionYear}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Visibility="{Binding Land, Converter={StaticResource CompareVisibilityConverter}}" Margin="15,10,0,0" >
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.Land, Source={StaticResource LocalizedStrings}}"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Land}"></TextBlock>
+                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=LocalizedResources.FootSquare, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Visibility="{Binding HeatingPrice, Converter={StaticResource CompareVisibilityConverter}}" Margin="15,10,0,0" >
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.HeatingPrice, Source={StaticResource LocalizedStrings}}"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding HeatingPrice}"></TextBlock>
+                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="$"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Visibility="{Binding NearBy, Converter={StaticResource CompareVisibilityConverter}}" Margin="15,10,0,0">
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.NearOf, Source={StaticResource LocalizedStrings}}"/>
+                                <ItemsControl Name="NearControl" ItemsSource="{Binding NearBy}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock>•</TextBlock>
+                                            <StackPanel>
+                                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=Name,Mode=TwoWay}"/>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=Distance,Mode=TwoWay}"/>
+                                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding DataContext.UnitDistance, ElementName=ComparePage}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+
+                            <StackPanel Visibility="{Binding RecentRenovations, Converter={StaticResource CompareVisibilityConverter}}" Margin="15,10,0,0">
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.RecentRepairs, Source={StaticResource LocalizedStrings}}"/>
+                                <ItemsControl ItemsSource="{Binding RecentRenovations, Converter={StaticResource StringToListConverter}}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock>•</TextBlock>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=.}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+
+                            <StackPanel Visibility="{Binding Repair, Converter={StaticResource CompareVisibilityConverter}}"  Margin="15,10,0,0">
+                                <TextBlock TextWrapping="Wrap"   Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.Repairs, Source={StaticResource LocalizedStrings}}"/>
+                                <ItemsControl ItemsSource="{Binding Repair}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock>•</TextBlock>
+                                                <StackPanel>
+                                                    <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Path=Name}"/>
+                                                    <Image Visibility="{Binding Image,Converter={StaticResource CompareVisibilityConverter}}" HorizontalAlignment="Left" Height="100" Margin="15,0,0,0" Tap="Image_Tap" Source="{Binding Image,Converter={StaticResource ByteToImageConverter}}" ></Image>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+
+                            <StackPanel  Margin="15,10,0,0">
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.Neighborhood, Source={StaticResource LocalizedStrings}}"/>
+                                <toolkit:Rating ReadOnly="True" Margin="12,0,0,0" Value="{Binding NeighborhoodQuality}" Name="RatingAmbience" HorizontalAlignment="Left"></toolkit:Rating>
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding NeighborhoodNotes}"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Margin="15,0,0,0">
+                                <TextBlock TextWrapping="Wrap"   Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.Light, Source={StaticResource LocalizedStrings}}"/>
+                                <toolkit:Rating ReadOnly="True" Margin="12,0,0,0" Value="{Binding Ambience}" HorizontalAlignment="Left"></toolkit:Rating>
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding AmbienceNotes}"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Visibility="{Binding Notes, Converter={StaticResource CompareVisibilityConverter}}" Margin="15,10,0,0">
+                                <TextBlock TextWrapping="Wrap"   Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.OtherNotes, Source={StaticResource LocalizedStrings}}"/>
+                                <TextBlock TextWrapping="Wrap"  Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Notes}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Visibility="{Binding Pictures, Converter={StaticResource CompareVisibilityConverter}}" Margin="15,10,0,0">
+                                <TextBlock TextWrapping="Wrap"   Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.OtherPictures, Source={StaticResource LocalizedStrings}}"/>
+                                <toolkit:LongListMultiSelector x:Name="listPictures" Margin="8,0,0,0"  
+                                        ItemsSource="{Binding Pictures}"
+                                        ItemTemplate="{StaticResource ItemTemplate}"                     
+                                        LayoutMode="Grid" 
+                                        GridCellSize="130,130"
+                                        Height="300"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </DataTemplate>
+            </phone:Pivot.ItemTemplate>
+        </phone:Pivot>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton  x:Name="IconRemove"  Click="IconRemove_Click"  IconUri="/Images/appbar.list.delete.png" Text="[remove]"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

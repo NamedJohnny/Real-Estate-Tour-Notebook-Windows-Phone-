@@ -1,0 +1,95 @@
+﻿<phone:PhoneApplicationPage x:Class="RealEstateTourNotebook.MainPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:ignore="http://www.ignore.com"
+                            mc:Ignorable="d ignore"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                            shell:SystemTray.IsVisible="True"
+                             xmlns:UserControls="clr-namespace:RealEstateTourNotebook.Controls"
+                            DataContext="{Binding Main, Source={StaticResource Locator}}"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- LOCALIZATION NOTE:
+            To localize the displayed strings copy their values to appropriately named
+            keys in the app's neutral language resource file (AppResources.resx) then
+            replace the hard-coded text value between the attributes' quotation marks
+            with the binding clause whose path points to that string name.
+
+            For example:
+
+                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+
+            This binding points to the template's string resource named "ApplicationTitle".
+
+            Adding supported languages in the Project Properties tab will create a
+            new resx file per language that can carry the translated values of your
+            UI strings. The binding in these examples will cause the value of the
+            attributes to be drawn from the .resx file that matches the
+            CurrentUICulture of the app at run time.
+         -->
+        
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel"
+                    Grid.Row="0"
+                    Margin="12,17,0,28">
+            <TextBlock Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}, Converter={StaticResource ToUpperConverter}}"
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       Margin="12,0" />
+            <TextBlock Text="{Binding Path=LocalizedResources.Home, Source={StaticResource LocalizedStrings}}"
+                       Margin="9,-7,0,0"
+                       Style="{StaticResource PhoneTextTitle1Style}" />
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1">
+        <StackPanel Margin="20,0,20,20" Grid.Row="1" VerticalAlignment="Top" Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="210"></RowDefinition>
+                        <RowDefinition Height="220"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width="210"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <UserControls:TileUserControl  TextVisible="True" Grid.Column="0" CustomColor="OrangeRed" Tap="NewVisit_Tap" x:Name="NewVisit" ImageSource="/Images/appbar.home.variant.enter.png" TextValue="{Binding Path=LocalizedResources.NewTour, Source={StaticResource LocalizedStrings}}" ></UserControls:TileUserControl>
+                    <UserControls:TileUserControl TextVisible="True" x:Name="Settings" Tap="Settings_Tap" Margin="10,0,0,0"  Grid.Column="1" CustomColor="Orange"  ImageSource="/Images/appbar.settings.png" TextValue="{Binding Path=LocalizedResources.Settings, Source={StaticResource LocalizedStrings}}" ></UserControls:TileUserControl>
+                    <UserControls:TileUserControl TextVisible="True" x:Name="ListVisit" Tap="ListVisit_Tap" Margin="0,10,0,0" Grid.Row="1" CustomColor="Gray" Grid.ColumnSpan="2" Grid.Column="0" ImageSource="/Images/appbar.places.png" TextValue="{Binding Path=LocalizedResources.ListTour, Source={StaticResource LocalizedStrings}}" ></UserControls:TileUserControl>
+
+                </Grid>
+
+
+            <Image Grid.Row="1" Margin="0,40,0,0" Source="Assets/pad.png" Height="200" VerticalAlignment="Bottom">
+                    <Image.RenderTransform>
+                        <RotateTransform CenterX="90" CenterY="90" Angle="350" />
+                    </Image.RenderTransform>
+                </Image>
+        </StackPanel>
+
+        </ScrollViewer>
+
+        <!--Uncomment to see an alignment grid to help ensure your controls are
+            aligned on common boundaries.  The image has a top margin of -32px to
+            account for the System Tray. Set this to 0 (or remove the margin altogether)
+            if the System Tray is hidden.
+
+            Before shipping remove this XAML and the image itself.-->
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+    </Grid>
+
+</phone:PhoneApplicationPage>

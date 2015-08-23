@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fr" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="RealEstateTourNotebook" product-version="1.0.0.1" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1250.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
+          </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">fr</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
+          </trans-unit>
+        <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
+          <source>Real Estate Tour Notebook</source>
+          <target state="signed-off">Carnet de visites</target></trans-unit>
+        <trans-unit id="Resx/NewTour" translate="yes" xml:space="preserve">
+          <source>New Tour</source>
+          <target state="translated">Nouvelle visite</target>
+        </trans-unit>
+        <trans-unit id="Resx/Home" translate="yes" xml:space="preserve">
+          <source>dashboard</source>
+          <target state="signed-off">tableau de bord</target>
+          </trans-unit>
+        <trans-unit id="Resx/OwnerName" translate="yes" xml:space="preserve">
+          <source>Owner's Name (or Agency)</source>
+          <target state="signed-off">Nom du propriétaire (ou de l'agence)</target></trans-unit>
+        <trans-unit id="Resx/DateTour" translate="yes" xml:space="preserve">
+          <source>Tour Date</source>
+          <target state="translated">Date de visite</target>
+        </trans-unit>
+        <trans-unit id="Resx/Save" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="translated">Sauvegarder</target>
+        </trans-unit>
+        <trans-unit id="Resx/EditTour" translate="yes" xml:space="preserve">
+          <source>Edit Tour</source>
+          <target state="translated">Modifier la visite</target>
+        </trans-unit>
+        <trans-unit id="Resx/EstateType" translate="yes" xml:space="preserve">
+          <source>Estate Type</source>
+          <target state="translated">Type de propriété</target>
+        </trans-unit>
+        <trans-unit id="Resx/Details" translate="yes" xml:space="preserve">
+          <source>Details</source>
+          <target state="translated">Détails</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyNotebook" translate="yes" xml:space="preserve">
+          <source>My Notebook</source>
+          <target state="new">My Notebook</target>
+        </trans-unit>
+        <trans-unit id="Resx/Purpose" translate="yes" xml:space="preserve">
+          <source>Purpose</source>
+          <target state="translated">But de la visite</target>
+        </trans-unit>
+        <trans-unit id="Resx/Rent" translate="yes" xml:space="preserve">
+          <source>Rent</source>
+          <target state="translated">Location</target>
+        </trans-unit>
+        <trans-unit id="Resx/DBFileName" translate="yes" xml:space="preserve">
+          <source>RealEstateNotebook.sdf</source>
+          <target state="new">RealEstateNotebook.sdf</target>
+        </trans-unit>
+        <trans-unit id="Resx/PhoneNumber" translate="yes" xml:space="preserve">
+          <source>Phone Number</source>
+          <target state="translated">Numéro de téléphone</target>
+        </trans-unit>
+        <trans-unit id="Resx/Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="Resx/Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">Modifier</target>
+        </trans-unit>
+        <trans-unit id="Resx/FilterBy" translate="yes" xml:space="preserve">
+          <source>Filter By :</source>
+          <target state="signed-off">Filtrer par : </target></trans-unit>
+        <trans-unit id="Resx/SelectTour" translate="yes" xml:space="preserve">
+          <source>select</source>
+          <target state="translated">sélectionner</target>
+        </trans-unit>
+        <trans-unit id="Resx/AllEstateType" translate="yes" xml:space="preserve">
+          <source>All</source>
+          <target state="signed-off">Tous</target>
+          </trans-unit>
+        <trans-unit id="Resx/Loading" translate="yes" xml:space="preserve">
+          <source>Loading...</source>
+          <target state="signed-off">Chargement...</target></trans-unit>
+        <trans-unit id="Resx/ChoosePicture" translate="yes" xml:space="preserve">
+          <source>Choose Picture</source>
+          <target state="translated">Choisir photo</target>
+        </trans-unit>
+        <trans-unit id="Resx/Compare" translate="yes" xml:space="preserve">
+          <source>Compare</source>
+          <target state="translated">Comparer</target>
+        </trans-unit>
+        <trans-unit id="Resx/Price" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target state="translated">Prix</target>
+        </trans-unit>
+        <trans-unit id="Resx/About" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">À propos</target>
+        </trans-unit>
+        <trans-unit id="Resx/AboutText" translate="yes" xml:space="preserve">
+          <source>Real Estate Tour Notebook is an indispensable support to your estate visits. When you visit , you may notice the points that looks interesting and then you can compare the different visits to find the best choice.
+
+John-William Forcier</source>
+          <target state="translated">Carnet de visites est un support indispensable à vos visites immobilières. Lorsque vous effectuez une visite, vous pouvez noter des points qui vous semblent intéressants et par la suite vous pouvez comparer les différentes visites pour trouver la meilleure.
+
+John-William Forcier</target></trans-unit>
+        <trans-unit id="Resx/RateApp" translate="yes" xml:space="preserve">
+          <source>Rate this app</source>
+          <target state="translated">Évaluer l'application</target>
+        </trans-unit>
+        <trans-unit id="Resx/Condominium" translate="yes" xml:space="preserve">
+          <source>Condominium</source>
+          <target state="new">Condominium</target>
+        </trans-unit>
+        <trans-unit id="Resx/Apartment" translate="yes" xml:space="preserve">
+          <source>Apartment</source>
+          <target state="translated">Appartement</target>
+        </trans-unit>
+        <trans-unit id="Resx/EstateCheckList" translate="yes" xml:space="preserve">
+          <source>Checklist</source>
+          <target state="new">Checklist</target>
+        </trans-unit>
+        <trans-unit id="Resx/House" translate="yes" xml:space="preserve">
+          <source>House</source>
+          <target state="translated">Maison</target>
+        </trans-unit>
+        <trans-unit id="Resx/Two" translate="yes" xml:space="preserve">
+          <source>2 1/2</source>
+          <target state="new">2 1/2</target>
+        </trans-unit>
+        <trans-unit id="Resx/HoldFinger" translate="yes" xml:space="preserve">
+          <source>Hold finger down on map to locate the place</source>
+          <target state="translated">Tenir le doigt enfoncé sur la carte pour localiser l'endroit</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyTour" translate="yes" xml:space="preserve">
+          <source>My Tour</source>
+          <target state="translated">Ma visite</target>
+        </trans-unit>
+        <trans-unit id="Resx/ApplyFilter" translate="yes" xml:space="preserve">
+          <source>Apply Filter</source>
+          <target state="translated">Appliquer le filtre</target>
+        </trans-unit>
+        <trans-unit id="Resx/Language" translate="yes" xml:space="preserve">
+          <source>Language</source>
+          <target state="translated">Langue</target>
+        </trans-unit>
+        <trans-unit id="Resx/fr" translate="yes" xml:space="preserve">
+          <source>French</source>
+          <target state="translated">Français</target>
+        </trans-unit>
+        <trans-unit id="Resx/PerMonth" translate="yes" xml:space="preserve">
+          <source>/ Month</source>
+          <target state="translated">/ Mois</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyChecklist" translate="yes" xml:space="preserve">
+          <source>My Checklist</source>
+          <target state="translated">Ma liste de contrôle</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyPosition" translate="yes" xml:space="preserve">
+          <source>My Position</source>
+          <target state="translated">Ma position</target>
+        </trans-unit>
+        <trans-unit id="Resx/Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">Avertissement</target>
+        </trans-unit>
+        <trans-unit id="Resx/GoTo" translate="yes" xml:space="preserve">
+          <source>Go to...</source>
+          <target state="translated">Se rendre...</target>
+        </trans-unit>
+        <trans-unit id="Resx/InvalideSearch" translate="yes" xml:space="preserve">
+          <source>No result found for : {0}</source>
+          <target state="translated">Aucuns résultats pour : {0}</target>
+        </trans-unit>
+        <trans-unit id="Resx/YearBuilt" translate="yes" xml:space="preserve">
+          <source>Year of construction</source>
+          <target state="translated">Année de construction</target>
+        </trans-unit>
+        <trans-unit id="Resx/Repairs" translate="yes" xml:space="preserve">
+          <source>Repairs</source>
+          <target state="translated">Réparations</target>
+        </trans-unit>
+        <trans-unit id="Resx/RecentRepairs" translate="yes" xml:space="preserve">
+          <source>Recent Repairs</source>
+          <target state="new">Recent Repairs</target>
+        </trans-unit>
+        <trans-unit id="Resx/Remove" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="translated">Enlever</target>
+        </trans-unit>
+        <trans-unit id="Resx/OtherPictures" translate="yes" xml:space="preserve">
+          <source>Other pictures</source>
+          <target state="translated">Autres photos</target>
+        </trans-unit>
+        <trans-unit id="Resx/UnitMeasurement" translate="yes" xml:space="preserve">
+          <source>Unit of dimension</source>
+          <target state="signed-off">Unité de dimension</target>
+          </trans-unit>
+        <trans-unit id="Resx/FootSquare" translate="yes" xml:space="preserve">
+          <source>sq.ft</source>
+          <target state="translated">pi2</target>
+        </trans-unit>
+        <trans-unit id="Resx/TODO" translate="yes" xml:space="preserve">
+          <source>TODO :</source>
+          <target state="translated">À faire : </target>
+        </trans-unit>
+        <trans-unit id="Resx/Recent" translate="yes" xml:space="preserve">
+          <source>Recent</source>
+          <target state="translated">Récente</target>
+        </trans-unit>
+        <trans-unit id="Resx/Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">Nom</target>
+        </trans-unit>
+        <trans-unit id="Resx/UnitDistance" translate="yes" xml:space="preserve">
+          <source>Unit of distance</source>
+          <target state="translated">Unité de distance</target>
+        </trans-unit>
+        <trans-unit id="Resx/Currency" translate="yes" xml:space="preserve">
+          <source>Currency</source>
+          <target state="translated">Monnaie</target>
+        </trans-unit>
+        <trans-unit id="Resx/OtherNotes" translate="yes" xml:space="preserve">
+          <source>Other notes</source>
+          <target state="translated">Autres notes</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddRecentRepair" translate="yes" xml:space="preserve">
+          <source>Recent Repairs</source>
+          <target state="signed-off">rénovations récentes</target>
+          </trans-unit>
+        <trans-unit id="Resx/AddRepairs" translate="yes" xml:space="preserve">
+          <source>todo Repair</source>
+          <target state="signed-off">réparations à faire</target>
+          </trans-unit>
+        <trans-unit id="Resx/AddNear" translate="yes" xml:space="preserve">
+          <source>Place</source>
+          <target state="signed-off">place</target>
+          </trans-unit>
+        <trans-unit id="Resx/Neighborhood" translate="yes" xml:space="preserve">
+          <source>Neighborhood quality (noise, traffic , parking, pets , etc )</source>
+          <target state="translated">Qualité du voisinage (bruit, traffic, parking, animaux, etc)</target>
+        </trans-unit>
+        <trans-unit id="Resx/NearOf" translate="yes" xml:space="preserve">
+          <source>Near of : </source>
+          <target state="translated">Près de : </target>
+        </trans-unit>
+        <trans-unit id="Resx/Light" translate="yes" xml:space="preserve">
+          <source>Light / Ambiance</source>
+          <target state="translated">Éclairage / Ambiance</target>
+        </trans-unit>
+        <trans-unit id="Resx/Land" translate="yes" xml:space="preserve">
+          <source>Land</source>
+          <target state="translated">Terrain</target>
+        </trans-unit>
+        <trans-unit id="Resx/HeatingPrice" translate="yes" xml:space="preserve">
+          <source>Heating Price</source>
+          <target state="translated">Prix du chauffage</target>
+        </trans-unit>
+        <trans-unit id="Resx/Dimensions" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <target state="new">Dimensions</target>
+        </trans-unit>
+        <trans-unit id="Resx/LocationError" translate="yes" xml:space="preserve">
+          <source>Make sure you have activated your location.</source>
+          <target state="translated">Votre localisation doit être activé.</target>
+        </trans-unit>
+        <trans-unit id="Resx/en" translate="yes" xml:space="preserve">
+          <source>English</source>
+          <target state="translated">Anglais</target>
+        </trans-unit>
+        <trans-unit id="Resx/RestartApp" translate="yes" xml:space="preserve">
+          <source>You need to restart</source>
+          <target state="translated">Un redémarrage est nécessaire</target>
+        </trans-unit>
+        <trans-unit id="Resx/AllTourType" translate="yes" xml:space="preserve">
+          <source>All</source>
+          <target state="signed-off">Tous</target>
+          </trans-unit>
+        <trans-unit id="Resx/Three" translate="yes" xml:space="preserve">
+          <source>3 1/2</source>
+          <target state="new">3 1/2</target>
+        </trans-unit>
+        <trans-unit id="Resx/Six" translate="yes" xml:space="preserve">
+          <source>6 1/2</source>
+          <target state="new">6 1/2</target>
+        </trans-unit>
+        <trans-unit id="Resx/Seven" translate="yes" xml:space="preserve">
+          <source>7 1/2 +</source>
+          <target state="new">7 1/2 +</target>
+        </trans-unit>
+        <trans-unit id="Resx/One" translate="yes" xml:space="preserve">
+          <source>1 1/2</source>
+          <target state="new">1 1/2</target>
+        </trans-unit>
+        <trans-unit id="Resx/Four" translate="yes" xml:space="preserve">
+          <source>4 1/2</source>
+          <target state="new">4 1/2</target>
+        </trans-unit>
+        <trans-unit id="Resx/Five" translate="yes" xml:space="preserve">
+          <source>5 1/2</source>
+          <target state="new">5 1/2</target>
+        </trans-unit>
+        <trans-unit id="Resx/Filtrer" translate="yes" xml:space="preserve">
+          <source>filter</source>
+          <target state="translated">filtrer</target>
+        </trans-unit>
+        <trans-unit id="Resx/Delete" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Supprimer</target>
+        </trans-unit>
+        <trans-unit id="Resx/BuyForInvestment" translate="yes" xml:space="preserve">
+          <source>Rental Investment</source>
+          <target state="signed-off">Investissement locatif</target>
+          </trans-unit>
+        <trans-unit id="Resx/BuyForHome" translate="yes" xml:space="preserve">
+          <source>Permanent Residence</source>
+          <target state="signed-off">Résidence principale</target>
+          </trans-unit>
+        <trans-unit id="Resx/Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Annuler</target>
+        </trans-unit>
+        <trans-unit id="Resx/Adress" translate="yes" xml:space="preserve">
+          <source>Address</source>
+          <target state="signed-off">Adresse</target>
+          </trans-unit>
+        <trans-unit id="Resx/ListTour" translate="yes" xml:space="preserve">
+          <source>My Tours</source>
+          <target state="signed-off">Mes visites</target></trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

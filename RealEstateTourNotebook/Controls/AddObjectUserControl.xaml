@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="RealEstateTourNotebook.Controls.AddObjectUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480"
+              xmlns:coding="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls">
+    
+        <StackPanel Orientation="Horizontal">
+            <coding:RoundButton Height="50" VerticalAlignment="Center"  ButtonHeight="65" ButtonWidth="65" HorizontalAlignment="Left" ImageSource="/Images/roundbutton.add.png"></coding:RoundButton>
+        <TextBlock VerticalAlignment="Top"  Style="{StaticResource PhoneTextLargeStyle}" Text="{Binding TextAdd, Mode=TwoWay}"></TextBlock>
+        </StackPanel>
+</UserControl>
