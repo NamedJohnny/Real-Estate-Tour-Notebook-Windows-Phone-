@@ -3,7 +3,9 @@ Real Estate Tour Notebook is an indispensable support to your estate visits. Whe
 
 # Installation
 You will need :
+* Visual Studio
 * Windows Phone SDK 8.0 (or later)
+* Multilingual App Toolkit (http://download.microsoft.com/download/3/2/4/324B517B-F5A3-480A-AAE0-DDB522358E96/MultilingualAppToolkit.msi)
 
 # Why Windows Phone??
 I think there is a lack of application on the Windows Store and I want to provide some effort to help the Windows Phone Community.
